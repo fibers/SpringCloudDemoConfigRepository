@@ -4,11 +4,11 @@ server.port: 8101
 # eureka
 eureka:  
   instance:
-    leaseRenewalIntervalInSeconds: 10
+    lease-renewal-interval-in-seconds: 10
   client:
-    registryFetchIntervalSeconds: 5
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8102}/eureka/
+    registry-fetch-interval-seconds: 5
+    service-url:
+      default-zone: ${EUREKA_SERVICE_URL:http://localhost:8102}/eureka/
 
 # admin
 spring.boot.admin:
@@ -20,7 +20,7 @@ management.security.enabled: false
 
 # config
 spring.cloud.config:
-  allowOverride: true
-  overrideNone: false
-  overrideSystemProperties: false
+  allow-override: true
+  override-none: false
+  override-system-properties: false
 

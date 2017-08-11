@@ -5,7 +5,8 @@ spring:
   cloud:
     config:
       allow-override: true
-      override-none: true
+      override-none: false
+      override-system-properties: false
 
 
 eureka:

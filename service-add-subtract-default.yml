@@ -1,14 +1,21 @@
-server.port=8201
+server:
+  port: 8201
 
-# eureka
-eureka.client.serviceUrl.defaultZone=http://localhost:8102/eureka/
-eureka.instance.leaseRenewalIntervalInSeconds=10
-eureka.client.registryFetchIntervalSeconds=5
+spring:
+  cloud:
+    config:
+      allow-override: true
+      override-none: false
+      override-system-properties: false
 
-# admin
-management.security.enabled=false
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8102/eureka/
 
-# config
-spring.cloud.config.allowOverride=true
-spring.cloud.config.overrideNone=false
-spring.cloud.config.overrideSystemProperties=false
+management:
+  security:
+    enabled: false
+
+
+

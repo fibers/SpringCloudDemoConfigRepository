@@ -1,13 +1,16 @@
 # server
-server.port=8101
+server.port: 8101
 
 # admin
-spring.boot.admin.routes.endpoints=env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,activiti
-spring.boot.admin.turbine.clusters=default
-spring.boot.admin.turbine.location=turbine
+spring.boot.admin:
+  routes.endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,activiti
+  turbine:
+    clusters: default
+    location: turbine
 
 # config
-spring.cloud.config.allowOverride=true
-spring.cloud.config.overrideNone=false
-spring.cloud.config.overrideSystemProperties=false
+spring.cloud.config:
+  allowOverride: true
+  overrideNone: false
+  overrideSystemProperties: false
 

@@ -1,21 +1,17 @@
 server:
   port: 8201
 
-# spring:
-#   cloud:
-#     config:
-#       allow-override: true
-#       override-none: false
-#       override-system-properties: false
+spring:
+  cloud:
+    config:
+      allow-override: true
+      override-none: false
+      override-system-properties: false
 
-# eureka:
-#   client:
-#     service-url:
-#       defaultZone: http://localhost:8102/eureka/
-
-# management:
-#   security:
-#     enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8102/eureka/
 
 
 

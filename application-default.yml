@@ -5,10 +5,10 @@ spring:
       override-none: false
       override-system-properties: false
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8102/eureka/
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://localhost:8102/eureka/
 # spring:
 #   profiles: secure
 #   security:
@@ -21,16 +21,16 @@ eureka:
 #       user.name: "user"         #These two are needed so that the server
 #       user.password: "password" #can access the protected client endpoints
 
-# eureka: 
-#   instance:
-#     leaseRenewalIntervalInSeconds: 10
-#     health-check-url-path: /actuator/health
-#     metadata-map:
-#       startup: ${random.int}    #needed to trigger info and endpoint update after restart
-#   client:
-#     registryFetchIntervalSeconds: 5
-#     serviceUrl:
-#       defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8102}/eureka/
+eureka: 
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8102}/eureka/
 
 management:
   endpoints:
